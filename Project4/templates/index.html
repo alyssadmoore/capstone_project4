@@ -24,7 +24,7 @@
       font-family: Roboto, sans-serif;
       src: url('https://github.com/FontFaceKit/roboto/blob/gh-pages/fonts/Regular/Roboto-Regular.woff')
     }
-    body      {font-family:Roboto; background:#444444;}
+    body      {font-family:Roboto; background:#999999;}
     h1        {text-align: center; background-color:#000000;color:#FFFFFF;}
     h2        {text-align:left;margin:30px;}
     p         {font-size: 15px; margin:30px;}
@@ -36,19 +36,22 @@
     form      {border: 1px; margin:15px;}
     .flash    {font-family:Roboto; font-weight: bold; margin: 15px;}
     .container{border: 1px solid black;
-               width: 600px; margin: 0 auto;
+               margin: 0 auto;
                background:#FFFFFF;}
-    .byline    {font-size: 12px; font-variant:small-caps;}
+    .byline   {font-size: 12px; font-variant:small-caps;}
   </style>
 </head>
 <body>
   <div class = "container">
-    <h1>Capstone Project 4</h1>
-    <hr>
-    <form action = "{{url_for('get_location_data')}}" method="post" class="get-location-data">
+    <div class = "col-sm-6">
+      <h1>Capstone Project 4</h1>
+      <hr>
+      <form action = "{{url_for('get_location_data')}}" method="post" class="get-location-data">
       <b>Enter your zipcode:</b>
       <input type = "text" size = "30" title = "zipcode"><input type = "submit" value = "Submit"><br>
-    </form>
+      </form>
+    </div>
+    <div class = "col-sm-4">
     {% for message in get_flashed_messages() %}
       <div class = "flash"> {{ message }} </div>
     {% endfor %}
@@ -56,6 +59,7 @@
       The stored data for the location will be iterated over here
       The filter for this will be the entered zipcode
     --->
+    </div>
   </div>
   <div class = 'byline'>
     Capstone Project 4, Group A
