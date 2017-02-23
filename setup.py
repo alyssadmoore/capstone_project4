@@ -5,4 +5,4 @@ setup(
     version='0.01.dev',
     description='Vacation app',
     author='Group A',
-    packages=['flask', 'sqlalchemy', 'requests', 'zipcode'])
+    packages=['flask', 'sqlalchemy', 'requests', 'zipcode', 'foursquare'])
